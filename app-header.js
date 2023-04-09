@@ -13,7 +13,7 @@ app.component("app-header", {
       `
       <header>
           <div class="nav-bar">
-            <img src="./images/logoTemp.png" alt=""/>
+            <img src="./images/logoTemp.png" alt="logo"/>
             <div class="dropDown">
               <button onclick="openNav()" class="menu"><img src="./images/menu.png" alt="menu" /></button>
               
@@ -39,7 +39,7 @@ app.component("app-header", {
             </div>
           </div>
           <ul class="dropContent" id="sideBar">
-              <button onclick="closeNav()" class="x"><img src="./images/x.png" class="closeBar"/> </button>
+              <button onclick="closeNav()" class="x"><img src="./images/x.png" alt="close" class="closeBar"/> </button>
               <li href="#"> Men </li>
               <li href="#"> Women </li>
               <li href="#"> New </li>

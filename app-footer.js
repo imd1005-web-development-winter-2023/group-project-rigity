@@ -16,9 +16,9 @@ app.component("app-footer", {
             <img src="./images/logoTemp.png" alt="Logo" class="logo" />
 
             <div class="media">
-              <img src="./images/twitter.png" alt="twitter logo" class="apps"/>
-              <img src="./images/facebook.png" alt="facebook logo" class="apps"/>
-              <img src="./images/insta.png" alt="instagram logo" class="apps"/>
+              <img src="./images/twitter.png" alt="twitter" class="apps"/>
+              <img src="./images/facebook.png" alt="facebook" class="apps"/>
+              <img src="./images/insta.png" alt="instagram" class="apps"/>
             </div>
             <div class="footerBar">
               <p href="#">Contact Us</p>

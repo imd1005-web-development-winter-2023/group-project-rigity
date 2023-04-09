@@ -185,7 +185,9 @@ footer .rightBar{
   border-radius: 8px;
   cursor: pointer;
 }
-
+.media{
+  display: flex;
+}
 
 
 

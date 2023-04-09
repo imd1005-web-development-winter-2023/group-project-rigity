@@ -462,6 +462,7 @@ opacity: 0.8;
 }
 .saleContent .saleBanner .content h2{
   color: #4a4d4f;
+  margin-bottom: 20px;
 }
 .saleContent .saleBanner .content button{
   border-style: none;

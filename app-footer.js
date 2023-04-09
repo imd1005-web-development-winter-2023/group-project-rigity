@@ -16,7 +16,7 @@ app.component("app-footer", {
             <img src="./images/logoTemp.png" alt="Logo" class="logo" />
 
             <div class="media">
-              <img src="./images/twitter.png" alt="twitter logo" class="apps">
+              <img src="./images/twitter.png" alt="twitter logo" class="apps"/>
               <img src="./images/facebook.png" alt="facebook logo" class="apps"/>
               <img src="./images/insta.png" alt="instagram logo" class="apps"/>
             </div>

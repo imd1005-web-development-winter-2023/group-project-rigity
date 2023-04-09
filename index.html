@@ -1,37 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ca">
   <head>
-    <!-- Set the page title -->
-    <title>Group Project</title>
-
-    <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
-
-    <!-- Set the screens default zoom / scale to 1 -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- We are using a CSS Reset file to standardize browser default css -->
     <link rel="stylesheet" href="./reset.css" />
-
-    <!-- This is where all of our awesome CSS code goes -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
-    <!--
+    <div id="app">
+      <app-header :cart="cart">
+      </app-header>
+      <main>
+        
+        <div class="banner">
+          <img src="./Images/headimg.jpg" class="mainimg">
+          <div class="textTitle">See our new trainer collection
+            <div class="smallTitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui libero</div>
+          <button class="buttonTitle">Shop now</button></div>
+          
+      </div>
+        <div class="saleContent"> 
+        <div class="saleBanner">
+            <div class="saleShoe"><img src="/Images/saleImg.png">
+            </div>
+          <div class="content">
+            <h1>Our biggest sale of the season</h1>
+            <p> on now until April 17th</p>
+            <h2>Save up to 70% on our biggest brands</h2>
+            <button> Learn more</button>
+          </div>
+        </div>
+      </div> 
 
-      ADD YOUR GROUP PROJECT CODE
 
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
+        <h1 class="sr-only"></h1>
 
-    -->
-    <main>
-      <div id="app"></div>
-    </main>
-
-    <!-- This is where we add our awesome JavaScript code -->
+        <donut-product v-for="product in products"
+          :prod-title="product"
+          @add-to-cart="updateCart">
+        </donut-product>
+        
+      </main>
+      <app-footer></app-footer>
+      
+    </div>
+    
     <script src="./main.js"></script>
+    <!-- <script src="./product.js"></script> -->
+    <script src="./app-header.js"></script>
+    <script src="./app-footer.js"></script>
+    <script>
+      function toTop(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+
+      app.mount("#app");
+    </script>
   </body>
 </html>

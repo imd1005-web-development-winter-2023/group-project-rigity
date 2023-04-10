@@ -1,95 +1,155 @@
 [
-      {
-        
-        "title": "Nike Air Force 1'07",
-        "imageSrc": "./images/NikeAirForce1_1.webp",
-        "selectorImageSrc": "./images/cBlueGrey.png",
-        "price": "180", "stock": 3,
-        "gender": "male","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "grey","varient": 3,
-        "sale": "true", "discount": "20"
-      },
-      {
-        "title": "Nike Air Force 1'07",
-        "imageSrc": "./images/NikeAirForce1_2.webp",
-        "selectorImageSrc": "./images/cBlack.png",
-        "price": "190", "stock": 55,
-        "gender": "male","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "black","varient": 3,
-        "sale": "false", "discount": "0"
-      },
-      {
-        "title": "Nike Air Force 1'07",
-        "imageSrc": "./images/NikeAirForce1_3.webp",
-        "selectorImageSrc": "./images/cWhite.png",
-        "price": 190, "stock": 0,
-        "gender": "male","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "white","varient": 3,
-        "sale": "false", "discount": "0"
-      },
-  
-  
-      
-      {
-        "title": "nikeDunkHighRetro",
-        "imageSrc": "./images/NikeDunkHighRetro1.webp",
-        "selectorImageSrc": "./images/cBlack.png",
-        "price": 150, "stock": 20,
-        "gender": "male","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "black"
-      },
-      {
-        "title": "nikeDunkHighRetro",
-        "imageSrc": "./images/NikeDunkHighRetro2.webp",
-        "selectorImageSrc": "./images/cRed.png",
-        "price": 150, "stock": 20,
-        "gender": "male","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "red"
-      },
- 
-   
-     
-      {
-        "title": "nikeAirForce1",
-        "imageSrc": "./images/NikeAirForce1_3.webp",
-        "selectorImageSrc": "./images/cWhite.png",
-        "price": 150, "stock": 20,
-        "gender": "female","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "white"
-      },
-  
-    
-      
-      {
-        "title": "nikeAirMax270G ",
-        "imageSrc": "./images/NikeAirMax270G_1.webp",
-        "selectorImageSrc": "./images/cWhite.png",
-        "price": 200, "stock": 20,
-        "gender": "male","brand": "nike","sport": "golf", "footwear": "shoe", "color": "white"
-      },
-      {
-        "title": "nikeAirMax270G",
-        "imageSrc": "./images/NikeAirMax270G_2.webp",
-        "selectorImageSrc": "./images/cBlack.png",
-        "price": 200, "stock": 20,
-        "gender": "male","brand": "nike","sport": "golf", "footwear": "shoe", "color": "black"
-      },
+  {
+    "title": "Nike Air Force 1'07",
+    "imageSrc": "./images/NikeAirForce1_1.webp",
+    "selectorImageSrc": "./images/cBlueGrey.png",
+    "price": "180",
+    "stock": 3,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "lifeStyle",
+    "footwear": "shoe",
+    "color": "grey",
+    "varient": 3,
+    "sale": true,
+    "discount": "20"
+  },
+  {
+    "title": "Nike Air Force 1'07",
+    "imageSrc": "./images/NikeAirForce1_2.webp",
+    "selectorImageSrc": "./images/cBlack.png",
+    "price": "190",
+    "stock": 55,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "lifeStyle",
+    "footwear": "shoe",
+    "color": "black",
+    "varient": 3,
+    "sale": false,
+    "discount": "0"
+  },
+  {
+    "title": "Nike Air Force 1'07",
+    "imageSrc": "./images/NikeAirForce1_3.webp",
+    "selectorImageSrc": "./images/cWhite.png",
+    "price": 190,
+    "stock": 0,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "lifeStyle",
+    "footwear": "shoe",
+    "color": "white",
+    "varient": 3,
+    "sale": false,
+    "discount": "0"
+  },
 
-  
-      {
-        "title": "nikeInvincible",
-        "imageSrc": "./images/NikeInvincible3_1.jpg",
-        "selectorImageSrc": "./images/cDarkBlue.png",
-        "price": 150, "stock": 20,
-        "gender": "male","brand": "nike","sport": "running", "footwear": "shoe", "color": "blue"
-      },
-      {
-        "title": "nikeInvincible",
-        "imageSrc": "./images/NikeInvincible3_2.webp",
-        "selectorImageSrc": "./images/cRed.png",
-        "price": 150, "stock": 20,
-        "gender": "male","brand": "nike","sport": "running", "footwear": "shoe", "color": "white"
-      },
-      {
-        "title": "nikeInvincible",
-        "imageSrc": "./images/NikeInvincible3_3.jpg",
-        "selectorImageSrc": "./images/cRed.png",
-        "price": 150, "stock": 20,
-        "gender": "male","brand": "nike","sport": "running", "footwear": "shoe", "color": "black"
-      }
-    
+  {
+    "title": "nikeDunkHighRetro",
+    "imageSrc": "./images/NikeDunkHighRetro1.webp",
+    "selectorImageSrc": "./images/cBlack.png",
+    "price": 150,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "lifeStyle",
+    "footwear": "shoe",
+    "color": "black",
+    "sale": false
+  },
+  {
+    "title": "nikeDunkHighRetro",
+    "imageSrc": "./images/NikeDunkHighRetro2.webp",
+    "selectorImageSrc": "./images/cRed.png",
+    "price": 150,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "lifeStyle",
+    "footwear": "shoe",
+    "color": "red",
+    "sale": false
+  },
+
+  {
+    "title": "nikeAirForce1",
+    "imageSrc": "./images/NikeAirForce1_3.webp",
+    "selectorImageSrc": "./images/cWhite.png",
+    "price": 150,
+    "stock": 20,
+    "gender": "female",
+    "brand": "nike",
+    "sport": "lifeStyle",
+    "footwear": "shoe",
+    "color": "white",
+    "sale": false
+  },
+
+  {
+    "title": "nikeAirMax270G ",
+    "imageSrc": "./images/NikeAirMax270G_1.webp",
+    "selectorImageSrc": "./images/cWhite.png",
+    "price": 200,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "golf",
+    "footwear": "shoe",
+    "color": "white",
+    "sale": false
+  },
+  {
+    "title": "nikeAirMax270G",
+    "imageSrc": "./images/NikeAirMax270G_2.webp",
+    "selectorImageSrc": "./images/cBlack.png",
+    "price": 200,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "golf",
+    "footwear": "shoe",
+    "color": "black",
+    "sale": false
+  },
+
+  {
+    "title": "nikeInvincible",
+    "imageSrc": "./images/NikeInvincible3_1.jpg",
+    "selectorImageSrc": "./images/cDarkBlue.png",
+    "price": 150,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "running",
+    "footwear": "shoe",
+    "color": "blue",
+    "sale": false
+  },
+  {
+    "title": "nikeInvincible",
+    "imageSrc": "./images/NikeInvincible3_2.webp",
+    "selectorImageSrc": "./images/cRed.png",
+    "price": 150,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "running",
+    "footwear": "shoe",
+    "color": "white",
+    "sale": false
+  },
+  {
+    "title": "nikeInvincible",
+    "imageSrc": "./images/NikeInvincible3_3.jpg",
+    "selectorImageSrc": "./images/cRed.png",
+    "price": 150,
+    "stock": 20,
+    "gender": "male",
+    "brand": "nike",
+    "sport": "running",
+    "footwear": "shoe",
+    "color": "black",
+    "sale": false
+  }
 ]

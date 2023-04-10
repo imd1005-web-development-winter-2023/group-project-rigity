@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-ca">
   <head>
-   
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
 
- 
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
-  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div id="app">
-     
+
       <main>
         <div class="mainContainer">
         <div class="catagoryBar">
@@ -29,8 +29,8 @@
         </div>
         <div>
         <ul class="products">
-          <ul v-for="(product, index) in products" class="product">
-            <li v-for="product">
+          <ul v-for="(product, index) in filteredProducts" class="product">
+            <li>
             <div class="itemShoe">
             <img
               class="image"
@@ -38,19 +38,19 @@
               v-bind:alt="product.imageSrc"
             /><p v-if="product.sale === 'true'" class="badgeSale">-{{ product.discount }}%</p>
             </div>
-            
-          
-            <div class="color"> 
+
+
+            <div class="color">
               <p>{{product.color}} - {{product.varient}} colors</p>
             </div>
             <div class="content">
-              <h2>{{ product.title }}</h2>  
+              <h2>{{ product.title }}</h2>
                     <!-- <div>Stock:{{ product.stock }}</div> Shows exact amount of stock -->
                     <p v-if="product.stock > 10" class="badge in-stock">In stock</p>
                     <p v-else-if="product.stock === 0" class="badge out-stock">Out of stock</p>
                     <p v-else="product.stock" class="badge low-stock">low stock</p>
                     <p>{{ }}</p>
-                    
+
             </div>
             <!-- <section> For vairents - not used on the catagroy page anymore
               <h3 class="sr-only">Product variants</h3>
@@ -64,7 +64,7 @@
               </ul>
             </section> -->
               <section>
-               
+
                 <h3 class="sr-only">Product price</h3>
                 <div class="price-section">
                 <p v-if="product.sale === 'true'" class="cut"> {{( (product.price) * (1 - ((product.discount) / 100)))}} <s>${{ product.price }}</s> </p>
@@ -73,15 +73,15 @@
                     v-bind:disabled="product.stock == 0"
                     class="btn-primary"
                     @click="addToCart(index), product.stock -= 1"
-                   
+
                   >
                     Add to cart
                   </button> -->
                 </div>
-                
+
               </section>
-              
-                  
+
+
             </div>
           </li>
           </ul>
@@ -91,10 +91,10 @@
         <app-footer></app-footer>
       </main>
     </div>
-    
+
     <script type="module" src="./main.js"></script>
     <script>
-     
+
 
     </script>
   </body>

@@ -2,19 +2,13 @@ const { createApp, reactive, computed, ref } = Vue;
 
 const app = createApp({
   setup() {
-   
     const cart = ref([]);
     const products = ref([]);
-   
+
     const dataFilePath = "./listItems.json";
 
-
-
-
-
-  
-
-
+    // Default to false
+    const selected = ref();
 
     fetch(dataFilePath)
       .then((response) => {
@@ -24,7 +18,6 @@ const app = createApp({
         products.value = data;
       });
 
-          
     // computed(() => {
     //   elp =() =>{
     //     const self = this;
@@ -38,65 +31,51 @@ const app = createApp({
     //       });
     //     }
     //     })
-      
-      
-    
 
+    // Functions to show only one varient
 
-      // Functions to show only one varient
-    
     const selectedVariantIndex = ref(0);
 
     function updateSelectedVariant(index) {
-       selectedVariantIndex.value = index;
+      selectedVariantIndex.value = index;
     }
     const imageSrc = computed(() => {
-        return product.children[selectedVariantIndex.value].imageSrc;
-      });
-    
-      // Only focusing on Price for now
-      const price = computed(() => {
-        return products.value[selectedVariantIndex.value];
-      });
+      return product.children[selectedVariantIndex.value].imageSrc;
+    });
 
+    // Only focusing on Price for now
+    const price = computed(() => {
+      return products.value[selectedVariantIndex.value];
+    });
 
-      const inStock = computed(() => {
-        return product.children[selectedVariantIndex.value].stock;
-      });
-    
-      const productTitle = computed(() =>{
-        return product.children[selectedVariantIndex.value].type;
-      });
-    
-    
+    const inStock = computed(() => {
+      return product.children[selectedVariantIndex.value].stock;
+    });
 
+    const productTitle = computed(() => {
+      return product.children[selectedVariantIndex.value].type;
+    });
 
     function addToCart(index) {
-    
       const foundIndex = cart.value.findIndex(
         (element) => element.title === products.value[index].title
       );
 
-     
       if (foundIndex === -1) {
         cart.value.push({
           title: products.value[index].title,
           quantity: 1,
         });
       } else {
-       
         cart.value[foundIndex].quantity += 1;
       }
 
- 
       products.value[index].stock -= 1;
 
       console.log("Cart contents", cart.value);
     }
 
-    
     const itemsInCart = computed(() => {
-     
       if (cart.value.length === 0) {
         return 0;
       }
@@ -110,14 +89,40 @@ const app = createApp({
       return quantity;
     });
 
-  
+    const filteredProducts = computed(() => {
+      if (selected.value) {
+        return products.value.filter((element) => element.sale === true);
+      }
+      return products.value;
+
+      // console.log(selected.value);
+
+      // console.log(products.value);
+
+      // // return products.value;
+
+      // return products.value.filter((product) => {
+      //   if (product.sale) {
+      //     console.log("Sale", product.sale);
+      //     if (product.sale === true) {
+      //       return true;
+      //     } else return false;
+      //   } else return false;
+      // });
+
+      // if (selected.value) {
+      //   return products.value.filter((product) => product.sale === true);
+      // }
+
+      // return products.value;
+    });
+
     return {
       cart,
       products,
-      
-     
-      itemsInCart,
 
+      itemsInCart,
+      selected,
       addToCart,
       selectedVariantIndex,
 
@@ -126,10 +131,8 @@ const app = createApp({
       price,
       inStock,
       productTitle,
-
+      filteredProducts,
       //  elp,
-     
-
     };
   },
 });

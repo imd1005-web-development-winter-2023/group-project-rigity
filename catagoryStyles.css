@@ -559,3 +559,7 @@
     font-size: 20px;
     
   }
+  .media{
+    display:flex;
+  }
+  

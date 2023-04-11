@@ -17,38 +17,41 @@
   </head>
   <main>
     <header>
-      <div class="logo">
-        <img
-          src="images/logoRed.png"
-          alt="Logo"
-          style="width: 50px; height: 50px; object-fit: cover"
-        />
-      </div>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">New Products</a></li>
-          <li><a href="#">Sale</a></li>
-        </ul>
-      </nav>
-      <!--<div class="header-search">
-        <form>
-          <input type="text" placeholder="Search" />
-        </form>-->
+        <div class="nav-bar">
+          <a href="index.html"><img src="./images/logoRed.png" alt="logo"  /></a>
+          <div class="dropDown">
+            <button onclick="openNav()" class="menu"><img src="./images/menu.png" alt="menu" /></button>
+            
+          </div>
+          <div class="sectionBar">
+             <a href="categoryIndex.html"><p href="#">Men</p></a>
+             <a href="categoryIndex.html"><p href="#">Women</p></a>
+             <a href="categoryIndex.html"><p href="#">New</p></a>
+             <a href="categoryIndex.html"><p href="#">Sale</p></a>
+          </div>
 
-      <div class="header-icons">
-        <div class="search-image">
-          <img src="images/search.png" alt="Search" />
+          <div class="rightBar">
+            <div class="search"><img src="./images/search.png" alt="search icon" /></div>
+            
+            
+            <a href="checkout.html"><div class="cart">
+              <img src="./images/cart.png" alt="Donut Logo" />
+              <p>
+                <span class="sr-only"> </span>0
+              </p>
+              </div></a>
+            <div class="account"><img src="./images/account.png" alt="account" /></div>
+          </div>
         </div>
-        <div class="cart">
-          <img src="images/cart.png" alt="Cart" />
-        </div>
-        <div class="profile">
-          <img src="images/account.png" alt="Account" />
-        </div>
-      </div>
-    </header>
+        <ul class="dropContent" id="sideBar">
+            <button onclick="closeNav()" class="x"><img src="./images/x.png" class="closeBar"> </button>
+            <li href="#"> Men </li>
+            <li href="#"> Women </li>
+            <li href="#"> New </li>
+            <li href="#"> Sale </li>
+            </ul>
+            
+      </header>
 
     <div class="preview-section">
       <div class="preview-item">
@@ -88,28 +91,30 @@
     </div>
     
     <footer>
-    
+        <div class="nav-bar">
+          <img src="./images/logoBlack.png" alt="Logo" class="logo" />
 
+          <div class="media">
+            <img src="./images/twitter.png" alt="twitter logo" class="apps">
+            <img src="./images/facebook.png" alt="facebook logo" class="apps"/>
+            <img src="./images/insta.png" alt="instagram logo" class="apps"/>
+          </div>
+          <div class="footerBar">
+            <p href="#">Contact Us</p>
+            <p href="#">FAQ</p>
+            <p href="#">Terms & Conditions</p>
+            <p href="#">Privacy Policy</p>
+          </div>
 
-    </div>
-    <div class="media">
-      
-      <img src="./images/twitter.png" alt="twitter" class="apps"/>
-      <img src="./images/facebook.png" alt="facebook" class="apps"/>
-      <img src="./images/insta.png" alt="instagram" class="apps"/>
-
-
-      <ul class="footer-links">
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Terms and Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-
-      
+          <div class="rightBar">
+            
+            <button onclick="toTop()" class="topButton"><img src="./images/arrow.png" alt="account" class="backTop"/></button>
+            
+          </div>
+        </div>
        
-      </div>
-    </footer>
+            
+       </footer>
 
   </main>
 </html>

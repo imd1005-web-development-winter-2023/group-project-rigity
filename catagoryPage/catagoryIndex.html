@@ -209,11 +209,11 @@
           <ul v-for="(product, index) in filteredProducts" class="product">
            
             <div class="itemShoe">
-            <img
+            <a href="preview.html"><img
               class="image"
               v-bind:src="product.imageSrc"
               v-bind:alt="product.imageSrc"
-            /><p v-if="product.sale === true" class="badgeSale">-{{ product.discount }}%</p>
+                    /></a><p v-if="product.sale === true" class="badgeSale">-{{ product.discount }}%</p>
             <p v-if="product.sNew === 'new'" class="badgeNew">New</p>
             </div>
             

@@ -63,16 +63,58 @@
                 </form>
             </div>
         </div>
-        <div class="cart-details"> 
+        <div class="cart-details">
             <h2>Order Summary</h2>
-            <p>Total</p>
+            <div>
+                <ul class="products">
+                  <ul v-for="(product, index) in products" class="product">
+                   
+                    <div class="itemShoe">
+                    <img
+                      class="image"
+                      v-bind:src="product.imageSrc"
+                      v-bind:alt="product.imageSrc"
+                    />
+                    </div>
+
+                    <div class="content">
+                        <p>{{product.color}}</p>
+                      <h2>{{ product.title }}</h2>  
+                    </div>
+                    <!-- <section> For vairents - not used on the catagroy page anymore
+                      <h3 class="sr-only">Product variants</h3>
+                      <ul class="variants-selector">
+                        <li v-for="children in product.children">
+                          <button v-on:click="updateSelectedVariant(index)" class="selected">
+                            <img v-bind:src="children.selectorImageSrc" alt="" />
+                            <span class="sr-only"> {{ children.type }}</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </section> -->
+                      <section>
+                       
+                        <h3 class="sr-only">Product price</h3>
+                        <div class="price-section">
+                        <p v-if="product.sale === true" class="cut"> ${{( (product.price) * (1 - ((product.discount) / 100)))}} <s>${{ product.price }}</s> </p>
+                        <p v-else class="pricee">${{ product.price }}</p>
+                        
+                        </div>
+                        
+                      </section>
+                      
+                    </div>
+                 
+                  </ul>
+                </ul>
+                
+            <div class="info">
+            
+            <p class="pricee">Total : $ 270 </p>
             <button>Place Order</button>
-        </div>
+        </div></div>
         <h1 class="sr-only"></h1>
-        <donut-product v-for="product in products"
-          :prod-title="product"
-          @add-to-cart="updateCart">
-        </donut-product>
+       
       </main>
       <app-footer></app-footer>
     </div>

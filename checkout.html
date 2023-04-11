@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./homePageStyle.css" />
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Checkout</title>
+  </head>
+  <body>
+    <div id="app">
+      <app-header :cart="cart">
+      </app-header>
+      <main>
+        <div class="form">
+            <h2>Checkout</h2>
+            <div class="customer">
+              <h3>Basic Info</h3>
+                <form>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="E-mail">
+                </form>
+            </div>
+            <div class="shipping">
+                <h3>Shipping Info</h3>
+                <form>
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="Postal Code">
+                    <input type="text" placeholder="City">
+                    <label>Province</label>
+                    <select name="province">
+                        <option value="Ontario">Ontario</option>
+                        <option value="Ontario">Quebec</option>
+                        <option value="Ontario">Saskatchewan</option>
+                        <option value="Ontario">Manitoba</option>
+                        <option value="Ontario">Alberta</option>
+                        <option value="Ontario">British Columbia</option>
+                        <option value="Ontario">Prince Edward Island</option>
+                        <option value="Ontario">New Brunswick</option>
+                        <option value="Ontario">Newfoundland and Labrador</option>
+                        <option value="Ontario">Nova Scotia</option>
+                        <option value="Ontario">Nunavut</option>
+                        <option value="Ontario">Northwest Territories</option>
+                        <option value="Ontario">Yukon</option>
+                    </select>
+                </form>
+            </div>
+            <div class="payment">
+                <h3>Payment Info</h3>
+                <form>
+                    <input type="text" placeholder="Credit Card Number">
+                    <input type="text" placeholder="Expiry Month">
+                    <input type="text" placeholder="Expiry Year">
+                    <input type="text" placeholder="CVV">
+                </form>
+            </div>
+        </div>
+        <div class="cart-details"> 
+            <h2>Order Summary</h2>
+            <p>Total</p>
+            <button>Place Order</button>
+        </div>
+        <h1 class="sr-only"></h1>
+        <donut-product v-for="product in products"
+          :prod-title="product"
+          @add-to-cart="updateCart">
+        </donut-product>
+      </main>
+      <app-footer></app-footer>
+    </div>
+    <script src="./main.js"></script>
+    <!-- <script src="./product.js"></script> -->
+    <script src="./app-header.js"></script>
+    <script src="./app-footer.js"></script>
+    <script>
+      function toTop(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      app.mount("#app");
+    </script>
+  </body>
+</html>

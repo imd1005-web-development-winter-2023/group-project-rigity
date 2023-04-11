@@ -24,7 +24,7 @@ app.component("app-header", {
               <p href="#">Sale</p>
             </div>
             <div class="rightBar">
-              <div class="search"><img src="./images/search.png" alt="search icon" /></div>
+             < <div class="search"><img src="./images/search.png" alt="search icon" /></div>
               
               <a href="checkout.html"><div class="cart">
                 <img src="./images/cart.png" alt="cart" />
@@ -58,5 +58,6 @@ const overlay = document.getElementById('overlay');
         document.getElementById("sideBar").style.width = "0";
         
         document.getElementById("overlay").style.display="none";
+       
         
       }

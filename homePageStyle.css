@@ -22,7 +22,7 @@ header .nav-bar .mainLogo {
 }
 header .nav-bar .sectionBar{
   display: flex;
-  
+  text-decoration: none;
 }
 header .nav-bar .sectionBar p{
   margin: 1rem;
@@ -33,6 +33,7 @@ header .nav-bar .sectionBar p{
   color: #000000;
   text-decoration: none;
 }
+
 header .nav-bar .sectionBar p:hover{
   color: #ee2625;
 }

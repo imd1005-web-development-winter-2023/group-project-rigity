@@ -18,10 +18,10 @@ app.component("app-header", {
             
             </div>
             <div class="sectionBar">
-              <p href="#">Men</p>
-              <p href="#">Women</p>
-              <p href="#">New</p>
-              <p href="#">Sale</p>
+              <a href="categoryIndex.html"><p href="#">Men</p></a>
+              <a href="categoryIndex.html"><p href="#">Women</p></a>
+              <a href="categoryIndex.html"><p href="#">New</p></a>
+              <a href="categoryIndex.html"><p href="#">Sale</p></a>
             </div>
             <div class="rightBar">
               <div class="search"><img src="./images/search.png" alt="search icon" /></div>
@@ -38,10 +38,10 @@ app.component("app-header", {
           </div>
           <ul class="dropContent" id="sideBar">
               <button onclick="closeNav()" class="x"><img src="./images/x.png" alt="close" class="closeBar"/> </button>
-              <li href="#"> Men </li>
-              <li href="#"> Women </li>
-              <li href="#"> New </li>
-              <li href="#"> Sale </li>
+              <a href="categoryIndex.html"><li href="#"> Men </li></a>
+              <a href="categoryIndex.html"><li href="#"> Women </li></a>
+              <a href="categoryIndex.html"><li href="#"> New </li></a>
+              <a href="categoryIndex.html"><li href="#"> Sale </li></a>
               </ul>
               
         </header>

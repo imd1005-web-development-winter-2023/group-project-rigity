@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./homePageStyle.css" />
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Checkout</title>
+  </head>
+  <body>
+    <div id="app">
+      <app-header :cart="cart">
+      </app-header>
+      <main>
+        <div class="form">
+            <h2>Checkout</h2>
+            <div class="customer">
+              <h3>Basic Info</h3>
+                <form>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="E-mail">
+                </form>
+            </div>
+            <div class="shipping">
+                <h3>Shipping Info</h3>
+                <form>
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="Postal Code">
+                    <input type="text" placeholder="City">
+                    <label>Province</label>
+                    <select name="province">
+                        <option value="Ontario">Ontario</option>
+                        <option value="Ontario">Quebec</option>
+                        <option value="Ontario">Saskatchewan</option>
+                        <option value="Ontario">Manitoba</option>
+                        <option value="Ontario">Alberta</option>
+                        <option value="Ontario">British Columbia</option>
+                        <option value="Ontario">Prince Edward Island</option>
+                        <option value="Ontario">New Brunswick</option>
+                        <option value="Ontario">Newfoundland and Labrador</option>
+                        <option value="Ontario">Nova Scotia</option>
+                        <option value="Ontario">Nunavut</option>
+                        <option value="Ontario">Northwest Territories</option>
+                        <option value="Ontario">Yukon</option>
+                    </select>
+                </form>
+            </div>
+            <div class="payment">
+                <h3>Payment Info</h3>
+                <form>
+                    <input type="text" placeholder="Credit Card Number">
+                    <input type="text" placeholder="Expiry Month">
+                    <input type="text" placeholder="Expiry Year">
+                    <input type="text" placeholder="CVV">
+                </form>
+            </div>
+        </div>
+        <div class="cart-details">
+            <h2>Order Summary</h2>
+            <div>
+                <ul class="products">
+                  <ul v-for="(product, index) in products" class="product">
+                   
+                    <div class="itemShoe">
+                    <img
+                      class="image"
+                      v-bind:src="product.imageSrc"
+                      v-bind:alt="product.imageSrc"
+                    />
+                    </div>
+
+                    <div class="content">
+                        <p>{{product.color}}</p>
+                      <h2>{{ product.title }}</h2>  
+                    </div>
+                    <!-- <section> For vairents - not used on the catagroy page anymore
+                      <h3 class="sr-only">Product variants</h3>
+                      <ul class="variants-selector">
+                        <li v-for="children in product.children">
+                          <button v-on:click="updateSelectedVariant(index)" class="selected">
+                            <img v-bind:src="children.selectorImageSrc" alt="" />
+                            <span class="sr-only"> {{ children.type }}</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </section> -->
+                      <section>
+                       
+                        <h3 class="sr-only">Product price</h3>
+                        <div class="price-section">
+                        <p v-if="product.sale === true" class="cut"> ${{( (product.price) * (1 - ((product.discount) / 100)))}} <s>${{ product.price }}</s> </p>
+                        <p v-else class="pricee">${{ product.price }}</p>
+                        
+                        </div>
+                        
+                      </section>
+                      
+                    </div>
+                 
+                  </ul>
+                </ul>
+                
+            <div class="info">
+            
+            <p class="pricee">Total : $ 270 </p>
+            <button>Place Order</button>
+        </div></div>
+        <h1 class="sr-only"></h1>
+       
+      </main>
+      <app-footer></app-footer>
+    </div>
+    <script src="./mains.js"></script>
+    <!-- <script src="./product.js"></script> -->
+    <script src="./app-header.js"></script>
+    <script src="./app-footer.js"></script>
+    <script>
+      function toTop(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      app.mount("#app");
+    </script>
+  </body>
+</html>

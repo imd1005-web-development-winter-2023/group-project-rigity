@@ -1,0 +1,21 @@
+[ 
+
+      {
+        "title": "NikeDunkHighRetro",
+        "imageSrc": "./images/NikeDunkHighRetro1.webp",
+        "selectorImageSrc": "./images/cBlack.png",
+        "price": 150, "stock": 20,
+        "gender": "male","brand": "nike","sport": "lifeStyle", "footwear": "shoe", "color": "black","varient": 2,
+        "sale": false, "discount": "0", "sNew": "new"
+      },
+  
+      {
+        "title": "Nike Air Max 270G ",
+        "imageSrc": "./images/NikeAirMax270G_1.webp",
+        "selectorImageSrc": "./images/cWhite.png",
+        "price": 200, "stock": 20,
+        "gender": "male","brand": "nike","sport": "golf", "footwear": "shoe", "color": "white","varient": 2,
+        "sale": true, "discount": "40"
+      }
+      
+]

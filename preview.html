@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Preview Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+      
+    />
+
+  </head>
+  <main>
+    <header>
+        <div class="nav-bar">
+          <a href="index.html"><img src="./images/logoRed.png" alt="logo"  /></a>
+          <div class="dropDown">
+            <button onclick="openNav()" class="menu"><img src="./images/menu.png" alt="menu" /></button>
+            
+          </div>
+          <div class="sectionBar">
+             <a href="categoryIndex.html"><p href="#">Men</p></a>
+             <a href="categoryIndex.html"><p href="#">Women</p></a>
+             <a href="categoryIndex.html"><p href="#">New</p></a>
+             <a href="categoryIndex.html"><p href="#">Sale</p></a>
+          </div>
+
+          <div class="rightBar">
+            <div class="search"><img src="./images/search.png" alt="search icon" /></div>
+            
+            
+            <a href="checkout.html"><div class="cart">
+              <img src="./images/cart.png" alt="Donut Logo" />
+              <p>
+                <span class="sr-only"> </span>0
+              </p>
+              </div></a>
+            <div class="account"><img src="./images/account.png" alt="account" /></div>
+          </div>
+        </div>
+        <ul class="dropContent" id="sideBar">
+            <button onclick="closeNav()" class="x"><img src="./images/x.png" class="closeBar"> </button>
+            <li href="#"> Men </li>
+            <li href="#"> Women </li>
+            <li href="#"> New </li>
+            <li href="#"> Sale </li>
+            </ul>
+            
+      </header>
+
+    <div class="preview-section">
+      <div class="preview-item">
+        <div class="preview-item-image">
+          <img src="images/NikeAirForce1_1.webp" alt="Preview Item" />
+        </div>
+        <div class="container">
+          <h2>Air Force 1</h2>
+          <p class="price">$99.99</p>
+          <p class="description">Description of the shoe goes here.</p>
+
+          <div class="colors">
+            <div class="colorOne"></div>
+            <div class="colorTwo"></div>
+            <div class="colorThree"></div>
+          </div>
+          <div class="buy">
+          <div class="size-options">
+            <label for="shoe-size">Select Size (US):</label>
+            <select name="shoe-size" id="shoe-size">
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        
+          <button class="my-button">Add To Cart</button>
+        </div>
+        <!--</div>-->
+      </div>
+    </div>
+    
+    <footer>
+        <div class="nav-bar">
+          <img src="./images/logoBlack.png" alt="Logo" class="logo" />
+
+          <div class="media">
+            <img src="./images/twitter.png" alt="twitter logo" class="apps">
+            <img src="./images/facebook.png" alt="facebook logo" class="apps"/>
+            <img src="./images/insta.png" alt="instagram logo" class="apps"/>
+          </div>
+          <div class="footerBar">
+            <p href="#">Contact Us</p>
+            <p href="#">FAQ</p>
+            <p href="#">Terms & Conditions</p>
+            <p href="#">Privacy Policy</p>
+          </div>
+
+          <div class="rightBar">
+            
+            <button onclick="toTop()" class="topButton"><img src="./images/arrow.png" alt="account" class="backTop"/></button>
+            
+          </div>
+        </div>
+       
+            
+       </footer>
+
+  </main>
+</html>

@@ -1,0 +1,89 @@
+main{
+    padding: 30px;
+    display: inline-flex;
+    
+}
+
+
+
+.form, .cart-details{
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+}
+
+.cart-details{
+    margin-left: 15px;
+    width: 40%;
+   
+    display: table-column;
+}
+@media screen and (max-width: 900px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    width: 100%}
+    .cart-details{
+        width: 60% ;
+        margin-left: 0;
+        margin-top: 20px ;
+    }
+  }
+.form{
+    display: flex;
+    display: table-column;
+    margin-right: 15px;
+    width: 60%;
+   
+}
+
+.customer, .shipping, .payment{
+    margin-top: 20px;
+}
+
+button{
+    width: 100%;
+    border: none;
+    background-color:#006fde;
+    color: white;
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input, select{
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid grey;
+}
+.product{
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.products{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin:0;
+}
+.cut {
+    font-size: 1.5rem;
+    list-style-type: none;
+   
+    font-family: 'Arimo', sans-serif;
+    margin: 20px;
+  }
+  .cut s{
+    font-size: 0.9rem;
+  }
+  .pricee{
+    font-size: 1.5rem;
+    list-style: none;
+    margin: 20px;
+  }

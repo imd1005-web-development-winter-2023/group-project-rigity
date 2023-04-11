@@ -1,0 +1,376 @@
+header {
+  padding: 2rem;
+  background-color:#d9d9d9;
+  color: #000000;
+  
+   z-index: 2;
+}
+header .nav-bar {
+  margin: 10 auto;
+  height: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .nav-bar img {
+  height: 2rem;
+  width: auto;
+  margin-right: 1rem;
+}
+
+header .nav-bar .sectionBar{
+  display: flex;
+  
+}
+header .nav-bar .sectionBar p{
+  margin: 1rem;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
+header .nav-bar .sectionBar p:hover{
+color: #ee2625;
+}
+header .nav-bar .sectionBar a{
+  text-decoration: none;
+}
+header .nav-bar .rightBar{
+  margin-left: auto;
+  display: flex;
+  cursor: pointer;
+  
+  overflow: hidden;
+  
+}
+header .nav-bar .cart {
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: 800;
+  
+}
+header .nav-bar .rightBar div{
+  padding: .5rem;
+}
+header .nav-bar .cart img + * {
+  margin: 0px;
+  padding: 1px 8px;
+  margin-left: -20px;
+  border-radius: 100px;
+  color: white;
+  background-color: #314354;
+}
+header .nav-bar .menu{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (max-width: 900px) {
+  header .sectionBar p{
+    display: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  .menu {
+      display: none;
+  }
+}
+.dropDown{
+  display:block;
+  
+}
+.dropContent{
+ /* display: none;*/  
+ width: 0;
+ overflow-x: hidden;
+ margin-top: -52px;
+ 
+ position: fixed;
+ left: 0;
+ 
+ background-color: #f4f4f4;
+ 
+ float: left;
+ z-index: 5;
+ height: 100%;
+ padding:0; 
+}
+.dropContent li{
+  color:#314354;
+  padding: 30px;
+  font-size: 40px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  
+  
+  margin: 0rem;
+  box-shadow: 0px 5px 10px 0px #c8c8c8;
+}
+.dropContent li:hover{
+  text-decoration: underline;
+  color: #4d4dca;
+}
+.x{
+  
+  border:none;
+  cursor: pointer;
+}
+.closeBar{
+  width: 20px;
+  padding: 10px;
+  margin-left: 295px;
+}
+@media screen and (max-height: 450px) {
+  .sideBar {padding-top: 15px;}
+ 
+}
+header .account{
+  margin-left: 15px;
+}
+
+
+main {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .logo{
+    padding-top: 10px;
+  }
+  
+  
+  
+  .preview-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  
+  .preview-item {
+    display: flex;
+    width: 90%;
+    height: 98%;
+    background-color: #ffffff;
+    padding-top: 4px;
+    border-radius: 5px;
+  }
+  
+  
+  .preview-item-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .preview-item-image img {
+    max-width: 100%;
+    max-height: 100%;
+    
+    border-radius: 5%;
+    height: 95%;
+    object-fit:contain;
+  }
+ 
+  
+  .preview-item-details {
+    width: 50%;
+    padding-left: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .preview-item-details h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+    color: #fc0000;
+  }
+  
+  .price {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 0px;
+    padding-top: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    margin-top: 60px;
+    padding-top: 20px;
+  }
+  
+  .size-options {
+    color: #6f6f6f;
+   /* padding-left: 40px;*/
+    margin-top: 30px;
+  }
+  
+  .size-options label {
+    font-size: 16px;
+  }
+  
+  .size-options select {
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .colors{
+    display: flex;
+    padding-top: 100px;
+  }
+
+  .colorOne
+  {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: rgb(118, 118, 118);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .colorOne:hover {
+    background-color: #ddd;
+    
+  }
+
+  .colorTwo
+  {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: rgb(242, 242, 242);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .colorTwo:hover {
+    background-color: #ddd;
+    
+  }
+
+
+  .colorThree
+  {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .colorThree:hover {
+    background-color: #ddd;
+    
+  }
+  
+  .buy
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 150px;
+    padding-bottom: 150px;
+    
+  }
+ .my-button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 9px;
+    padding-left: 7px;
+  }
+
+  .my-button:hover{
+    background-color: rgb(247, 247, 247);
+    color: rgb(0, 0, 0);
+  }
+
+  
+  footer{
+    padding: 2rem;
+    background-color: #d9d9d9;
+    color: #000000;
+   
+     z-index: 2;
+  }
+  footer .nav-bar .logo {
+    height: 2rem;
+    width: auto;
+    margin-right: 1rem;
+  }
+  footer .nav-bar .backTop{
+    width: 30px;
+    padding: 2px;
+  }
+  footer .nav-bar {
+    margin: 10 auto;
+    height: 10px;
+    display: flex;
+    
+    align-items: center;
+  }
+  
+  footer .nav-bar .footerBar { display: flex;}
+  footer .nav-bar .footerBar p{
+   
+    margin: 1rem;
+    text-align: center;
+    justify-content: end;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 900px) {
+    footer .footerBar p{
+      display: none;
+    }
+  }
+  footer .rightBar{
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+    justify-content: end;
+    overflow: hidden;
+    
+  }
+  .closeBar{
+    width: 30px ;
+  }
+  .apps{
+    width: 25px;
+    margin-inline: 10px;
+    cursor: pointer;
+  }
+  .topButton{
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

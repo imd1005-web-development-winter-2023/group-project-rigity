@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./catagoryStyles.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+     
+     
+      <main>
+        <header>
+          <div class="nav-bar">
+            <a href="index.html"><img src="./images/logoRed.png" alt="logo"  /></a>
+            <div class="dropDown">
+              <button onclick="openNav()" class="menu"><img src="./images/menu.png" alt="menu" /></button>
+              
+            </div>
+            <div class="sectionBar">
+               <a href="categoryIndex.html"><p href="#">Men</p></a>
+               <a href="categoryIndex.html"><p href="#">Women</p></a>
+               <a href="categoryIndex.html"><p href="#">New</p></a>
+               <a href="categoryIndex.html"><p href="#">Sale</p></a>
+            </div>
+
+            <div class="rightBar">
+              <div class="search"><img src="./images/search.png" alt="search icon" /></div>
+              
+              
+              <a href="checkout.html"><div class="cart">
+                <img src="./images/cart.png" alt="Donut Logo" />
+                <p>
+                  <span class="sr-only">Number of items in cart: </span>{{
+                  itemsInCart }}
+                </p>
+                </div></a>
+              <div class="account"><img src="./images/account.png" alt="account" /></div>
+            </div>
+          </div>
+          <ul class="dropContent" id="sideBar">
+              <button onclick="closeNav()" class="x"><img src="./images/x.png" class="closeBar"> </button>
+              <li href="#"> Men </li>
+              <li href="#"> Women </li>
+              <li href="#"> New </li>
+              <li href="#"> Sale </li>
+              </ul>
+              
+        </header>
+        <div class="miniBar"> 
+          <button onclick="openFilter()" class="filterButton">Filters</button>
+        </div>
+        <ul class="dropFilter" id="sideFilter">
+          <button onclick="closeFilter()" class="x"><img src="./images/x.png" class="closeBar2"> </button>
+          <div class="catagoryBar2">
+            <div class="catText">
+            <h2>Filters</h2>
+            <h3>Gender</h3>
+              
+                <div class="ht"> <input type="checkbox" class="options" value="gender" v-model="male"><label>Men</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="gender" v-model="female"><label>Women</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="gender" v-model="unisex"><label>Unisex</label></input> </div>
+                <div class="divi"></div>
+              <h3>Sort by Sport</h3>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="basketball"><label>Basketball</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="football"><label>Football</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="running"><label>Running</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="tennis"><label>Tennis</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="golf"><label>Golf</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="lifestyle"><label>Lifestyle</label></input> </div>
+                <div class="divi"></div>
+              <h3>By Brand</h3>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="nike"><label>Nike</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="adidas"><label>Adidas</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="puma"><label>Puma</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="vans"><label>Vans</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="converse"><label>Converse</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="reebok"><label>Reebok</label></input> </div>
+                <div class="divi"></div>
+              <h3>By colour</h3>
+                <div class="colorFlex">
+                <img class="byColor" src="./images/cBlack.png"/>
+                <img class="byColor" src="./images/cGrey.png"/>
+                <img class="byColor" src="./images/cWhite.png"/>
+                <img class="byColor" src="./images/cRed.png"/>
+                <img class="byColor" src="./images/cOrange.png"/>
+                <img class="byColor" src="./images/cGreen.png"/>
+                <img class="byColor" src="./images/cDarkGreen.png"/>
+                <img class="byColor" src="./images/cBlue.png"/>
+                <img class="byColor" src="./images/cDarkBlue.png"/>
+                <img class="byColor" src="./images/cPurple.png"/>
+                <img class="byColor" src="./images/cPink.png"/>
+                <img class="byColor" src="./images/cBrown.png"/>
+                <img class="byColor" src="./images/cLightBrown.png"/>
+                  </div>
+                <div class="divi"></div>
+                <div class="sizeBox">
+                
+              <h3>By size</h3>
+                <button class="bySize">4</button>
+                <button class="bySize">4.5</button>
+                <button class="bySize">5</button>
+                <button class="bySize">5.5</button>
+                <button class="bySize">6</button>
+                <button class="bySize">6.5</button>
+                <button class="bySize">7</button>
+                <button class="bySize">7.5</button>
+                <button class="bySize">8</button>
+                <button class="bySize">8.5</button>
+                <button class="bySize">9</button>
+                <button class="bySize">9.5</button>
+                <button class="bySize">10</button>
+                <button class="bySize">10.5</button>
+                <button class="bySize">11</button>
+                <button class="bySize">11.5</button>
+                <button class="bySize">12</button>
+                <button class="bySize">12.5</button>
+                <button class="bySize">13</button>
+                <button class="bySize">13.5</button>
+                <div class="divi"></div>
+                </div>
+
+            </div>
+        </div>
+          </ul>
+        <div class="mainContainer">
+        
+       
+          <div class="catagoryBar">
+            <div class="catText">
+            <h2>Filters</h2>
+            <h3>Gender</h3>
+              
+                <div class="ht"> <input type="checkbox" class="options" value="gender" v-model="male"><label>Men</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="gender" v-model="female"><label>Women</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="gender" v-model="unisex"><label>Unisex</label></input> </div>
+                <div class="divi"></div>
+              <h3>Sort by Sport</h3>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="basketball"><label>Basketball</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="football"><label>Football</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="running"><label>Running</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="tennis"><label>Tennis</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="golf"><label>Golf</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="sport" v-model="lifestyle"><label>Lifestyle</label></input> </div>
+                <div class="divi"></div>
+              <h3>By Brand</h3>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="nike"><label>Nike</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="adidas"><label>Adidas</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="puma"><label>Puma</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="vans"><label>Vans</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="converse"><label>Converse</label></input> </div>
+                <div class="ht"> <input type="checkbox" class="options" value="brand" v-model="reebok"><label>Reebok</label></input> </div>
+                <div class="divi"></div>
+              <h3>Other</h3>
+              <div class="ht"><input type="checkbox" value="sale" v-model="selected" class="options"><label>Sale</label></input></div>
+                <div class="ht"><input type="checkbox" value="sNew" v-model="sNew" class="options"><label>New</label></input></div>
+                <div class="divi"></div>
+                
+              <h3>By colour</h3>
+              <div class="colorFlex">
+                <img class="byColor" src="./images/cBlack.png"/>
+                <img class="byColor" src="./images/cGrey.png"/>
+                <img class="byColor" src="./images/cWhite.png"/>
+                <img class="byColor" src="./images/cRed.png"/>
+                <img class="byColor" src="./images/cOrange.png"/>
+                <img class="byColor" src="./images/cGreen.png"/>
+                <img class="byColor" src="./images/cDarkGreen.png"/>
+                <img class="byColor" src="./images/cBlue.png"/>
+                <img class="byColor" src="./images/cDarkBlue.png"/>
+                <img class="byColor" src="./images/cPurple.png"/>
+                <img class="byColor" src="./images/cPink.png"/>
+                <img class="byColor" src="./images/cBrown.png"/>
+                <img class="byColor" src="./images/cLightBrown.png"/>
+                </div>
+                <div class="divi"></div>
+                <div class="sizeBox">
+                
+              <h3>By size</h3>
+                <button class="bySize">4</button>
+                <button class="bySize">4.5</button>
+                <button class="bySize">5</button>
+                <button class="bySize">5.5</button>
+                <button class="bySize">6</button>
+                <button class="bySize">6.5</button>
+                <button class="bySize">7</button>
+                <button class="bySize">7.5</button>
+                <button class="bySize">8</button>
+                <button class="bySize">8.5</button>
+                <button class="bySize">9</button>
+                <button class="bySize">9.5</button>
+                <button class="bySize">10</button>
+                <button class="bySize">10.5</button>
+                <button class="bySize">11</button>
+                <button class="bySize">11.5</button>
+                <button class="bySize">12</button>
+                <button class="bySize">12.5</button>
+                <button class="bySize">13</button>
+                <button class="bySize">13.5</button>
+                <div class="divi"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+        <ul class="products">
+          <ul v-for="(product, index) in filteredProducts" class="product">
+           
+            <div class="itemShoe">
+            <a href="preview.html"><img
+              class="image"
+              v-bind:src="product.imageSrc"
+              v-bind:alt="product.imageSrc"
+                    /></a><p v-if="product.sale === true" class="badgeSale">-{{ product.discount }}%</p>
+            <p v-if="product.sNew === 'new'" class="badgeNew">New</p>
+            </div>
+            
+          
+            <div class="color"> 
+              <p>{{product.color}} - {{product.varient}} colors</p>
+            </div>
+            <div class="content">
+              <h2>{{ product.title }}</h2>  
+                     <!-- <div>Stock:{{ product.stock }}</div> Shows exact amount of stock-->
+                    <p v-if="product.stock > 10" class="badge in-stock">In stock</p>
+                    <p v-else-if="product.stock === 0" class="badge out-stock">Out of stock</p>
+                    <p v-else="product.stock" class="badge low-stock">low stock</p>
+                    <p>{{ }}</p>
+                    
+            </div>
+            <!-- <section> For vairents - not used on the catagroy page anymore
+              <h3 class="sr-only">Product variants</h3>
+              <ul class="variants-selector">
+                <li v-for="children in product.children">
+                  <button v-on:click="updateSelectedVariant(index)" class="selected">
+                    <img v-bind:src="children.selectorImageSrc" alt="" />
+                    <span class="sr-only"> {{ children.type }}</span>
+                  </button>
+                </li>
+              </ul>
+            </section> -->
+              <section>
+               
+                <h3 class="sr-only">Product price</h3>
+                <div class="price-section">
+                <p v-if="product.sale === true" class="cut"> ${{( (product.price) * (1 - ((product.discount) / 100)))}} <s>${{ product.price }}</s> </p>
+                <p v-else class="price">${{ product.price }}</p>
+                 <button
+                    v-bind:disabled="product.stock == '0'"
+                    class="btn-primary"
+                    @click="addToCart(index), product.stock -= 1"
+                   
+                  >
+                    Add to cart
+                  </button> 
+                </div>
+                
+              </section>
+              
+            </div>
+         
+          </ul>
+        </ul>
+        </div>
+        </div>
+        <footer>
+          <div class="nav-bar">
+            <img src="./images/logoBlack.png" alt="Logo" class="logo" />
+
+            <div class="media">
+              <img src="./images/twitter.png" alt="twitter logo" class="apps">
+              <img src="./images/facebook.png" alt="facebook logo" class="apps"/>
+              <img src="./images/insta.png" alt="instagram logo" class="apps"/>
+            </div>
+            <div class="footerBar">
+              <p href="#">Contact Us</p>
+              <p href="#">FAQ</p>
+              <p href="#">Terms & Conditions</p>
+              <p href="#">Privacy Policy</p>
+            </div>
+
+            <div class="rightBar">
+              
+              <button onclick="toTop()" class="topButton"><img src="./images/arrow.png" alt="account" class="backTop"/></button>
+              
+            </div>
+          </div>
+         
+              
+         </footer>
+      </main>
+    </div>
+    
+    <script type="module" src="./catagoryMain.js"></script>
+    <script>
+
+      function toTop(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+     const overlay = document.getElementById('overlay');
+      function openNav(){
+        document.getElementById("sideBar").style.width = "350px";
+        
+        document.getElementById("overlay").style.display="block";
+        
+      }
+      
+      function closeNav(){
+        document.getElementById("sideBar").style.width = "0";
+        
+        document.getElementById("overlay").style.display="none";
+        
+      }
+
+      function openFilter(){
+        document.getElementById("sideFilter").style.width = "100%";
+        
+        document.getElementById("overlay").style.display="block";
+        
+      }
+      function closeFilter(){
+        document.getElementById("sideFilter").style.width = "0";
+        
+        document.getElementById("overlay").style.display="none";
+        
+      }
+    </script>
+  </body>
+</html>

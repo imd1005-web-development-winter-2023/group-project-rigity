@@ -26,12 +26,12 @@ app.component("app-header", {
             <div class="rightBar">
               <div class="search"><img src="./images/search.png" alt="search icon" /></div>
               
-              <div class="cart">
+              <a href="checkout.html"><div class="cart">
                 <img src="./images/cart.png" alt="cart" />
                 <p>
                   <span class="sr-only">Number of items in cart: </span>{{ cart }}
                 </p>
-              </div>
+              </div></a>
               <div class="account"><img src="./images/account.png" alt="account" /></div>
               
             </div>

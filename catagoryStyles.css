@@ -559,10 +559,3 @@
     font-size: 20px;
     
   }
-.media{
-  display: flex;
-}
-.colorFlex{
-  display:flex;
-  flex-wrap: wrap;
-}

@@ -24,7 +24,7 @@ header .nav-bar .sectionBar{
   display: flex;
   
 }
-header .nav-bar .sectionBar a{
+header .nav-bar .sectionBar p{
   margin: 1rem;
   text-align: center;
   justify-content: center;
@@ -33,7 +33,7 @@ header .nav-bar .sectionBar a{
   color: #000000;
   text-decoration: none;
 }
-header .nav-bar .sectionBar a:hover{
+header .nav-bar .sectionBar p:hover{
   color: #ee2625;
 }
 

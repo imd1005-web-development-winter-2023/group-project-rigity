@@ -13,7 +13,7 @@ app.component("app-footer", {
       `
       <footer>
           <div class="nav-bar">
-            <img src="./images/logoTemp.png" alt="Logo" class="logo" />
+            <img src="./images/logoBlack.png" alt="Logo" class="logo" />
 
             <div class="media">
               <img src="./images/twitter.png" alt="twitter" class="apps"/>

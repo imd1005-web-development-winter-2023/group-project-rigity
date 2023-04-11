@@ -3,8 +3,7 @@ app.component("app-header", {
     props: ["cart"],
     
     setup(props) {
-  
-      
+ 
           return {
              
           }
@@ -13,19 +12,17 @@ app.component("app-header", {
       `
       <header>
           <div class="nav-bar">
-            <img src="./images/logoRed.png" alt="logo" class="mainLogo" />
+            <img src="./images/logoRed.png" alt="logo"/>
             <div class="dropDown">
               <button onclick="openNav()" class="menu"><img src="./images/menu.png" alt="menu" /></button>
-              
+            
             </div>
             <div class="sectionBar">
-              <a href="#">Men</a>
-              <a href="#">Women</a>
-              <a href="#">New</a>
-              <a href="#">Sale</a>
-              
+              <p href="#">Men</p>
+              <p href="#">Women</p>
+              <p href="#">New</p>
+              <p href="#">Sale</p>
             </div>
-
             <div class="rightBar">
               <div class="search"><img src="./images/search.png" alt="search icon" /></div>
               
@@ -40,17 +37,15 @@ app.component("app-header", {
             </div>
           </div>
           <ul class="dropContent" id="sideBar">
-              <button onclick="closeNav()" class="x"><img src="./images/x.png" class="closeBar"> </button>
-              <a href="productIndex.html"><li>Home</li></a>
-              <a href="#"><li>Men</li></a>
-              <a href="#"><li>Women</li></a>
-              <a href="#"><li>New</li></a>
-              <a href="#"><li>Sale</li></a>
+              <button onclick="closeNav()" class="x"><img src="./images/x.png" alt="close" class="closeBar"/> </button>
+              <li href="#"> Men </li>
+              <li href="#"> Women </li>
+              <li href="#"> New </li>
+              <li href="#"> Sale </li>
               </ul>
               
         </header>
       `,
-
 })
 const overlay = document.getElementById('overlay');
       function openNav(){

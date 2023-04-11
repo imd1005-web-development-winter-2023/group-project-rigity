@@ -562,4 +562,8 @@
   .media{
     display:flex;
   }
+  .colorFlex{
+    display:flex;
+    flex-wrap: wrap;
+  }
   

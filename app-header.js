@@ -12,7 +12,7 @@ app.component("app-header", {
       `
       <header>
           <div class="nav-bar">
-            <img src="./images/logoRed.png" alt="logo"/>
+            <a href="index.html"><img src="./images/logoRed.png" alt="logo"/></a>
             <div class="dropDown">
               <button onclick="openNav()" class="menu"><img src="./images/menu.png" alt="menu" /></button>
             
@@ -24,7 +24,7 @@ app.component("app-header", {
               <p href="#">Sale</p>
             </div>
             <div class="rightBar">
-             < <div class="search"><img src="./images/search.png" alt="search icon" /></div>
+              <div class="search"><img src="./images/search.png" alt="search icon" /></div>
               
               <a href="checkout.html"><div class="cart">
                 <img src="./images/cart.png" alt="cart" />

@@ -2,7 +2,6 @@ header {
   padding: 2rem;
   background-color: #d9d9d9;
   color: #000000;
-  
    z-index: 2;
 }
 header .nav-bar {
@@ -18,17 +17,24 @@ header .nav-bar img {
   width: auto;
   margin-right: 1rem;
 }
-
+header .nav-bar .mainLogo {
+  height: 3rem;
+}
 header .nav-bar .sectionBar{
   display: flex;
   
 }
-header .nav-bar .sectionBar p{
+header .nav-bar .sectionBar a{
   margin: 1rem;
   text-align: center;
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
+header .nav-bar .sectionBar a:hover{
+  color: #ee2625;
 }
 
 header .nav-bar .rightBar{
@@ -64,7 +70,7 @@ header .nav-bar .menu{
   border: none;
 }
 @media screen and (max-width: 900px) {
-  header .sectionBar p{
+  header .sectionBar a{
     display: none;
   }
 }
@@ -100,14 +106,18 @@ header .nav-bar .menu{
   overflow: hidden;
   text-decoration: none;
   cursor: pointer;
-  
-  
   margin: 0rem;
   box-shadow: 0px 5px 10px 0px #c8c8c8;
 }
+.dropContent a{
+  color:#314354;
+  text-decoration: none;
+  overflow: hidden;
+}
+
 .dropContent li:hover{
   text-decoration: underline;
-  color: #4d4dca;
+  color: #ee2625;
 }
 .x{
   
@@ -185,20 +195,25 @@ footer .rightBar{
   border-radius: 8px;
   cursor: pointer;
 }
+.topButton:hover{
+  background-color: #d2d2d2;
+}
 .media{
   display: flex;
 }
 
-
-
-
-
-
-/*.dropContent:hover .dropDown:hover{
-  display:block;
+.mainLogo{
+  width: 40px;
 }
- PRODUCT CARD
-*/
+
+.title{
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 80px;
+
+  text-align: center;
+  margin-bottom:-20px;
+}
+
 
 .product {
   display:inline-block;
@@ -344,18 +359,6 @@ main {
   touch-action: manipulation;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #706e79;
-}
-
-.btn-primary:disabled {
-  background-color: #cecacc;
-  cursor: not-allowed;
-}
-
-
-
 body {
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
@@ -386,12 +389,13 @@ body {
  border-radius: 30px;
  filter: brightness(40%);
  object-fit: cover;
+ 
 }
 
 
 .textTitle{
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   font-family: 'Archivo Black', sans-serif;
@@ -456,13 +460,12 @@ opacity: 0.8;
   font-size: 35px;flex-wrap: wrap;
 }
 .saleContent .saleBanner .content p{
-  margin-top: 0px;
+  margin-top: -20px;
   font-size: 12px;
   color: #4a4d4f;
 }
 .saleContent .saleBanner .content h2{
   color: #4a4d4f;
-  margin-bottom: 20px;
 }
 .saleContent .saleBanner .content button{
   border-style: none;
